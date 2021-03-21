@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: tnorlund/gatsby-cloud-action@v1.0.1
+      uses: tnorlund/gatsby-cloud-action@v1.0.2
       with:
         who-to-greet: 'Tyler'
     # Use the output from the `hello` step
