@@ -1,6 +1,6 @@
 {
-  "name": "GatsbyCloudAction",
-  "version": "1.0.0",
+  "name": "gatsby-cloud-action",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tnorlund/GatsbyCloudAction.git"
+    "url": "git+https://github.com/tnorlund/gatsby-cloud-action.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tnorlund/GatsbyCloudAction/issues"
+    "url": "https://github.com/tnorlund/gatsby-cloud-action/issues"
   },
-  "homepage": "https://github.com/tnorlund/GatsbyCloudAction#readme",
+  "homepage": "https://github.com/tnorlund/gatsby-cloud-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0"
