@@ -1,0 +1,24 @@
+{
+  "name": "GatsbyCloudAction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnorlund/GatsbyCloudAction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tnorlund/GatsbyCloudAction/issues"
+  },
+  "homepage": "https://github.com/tnorlund/GatsbyCloudAction#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
