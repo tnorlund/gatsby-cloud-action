@@ -1,13 +1,13 @@
 name: "Gatsby Cloud ENV Update"
 description: "Update the ENV of Gatsby Cloud"
 inputs:
-  GATSBY_TOKEN:
+  gatsby-token:
     description: "The token used to access Gatsby Cloud"
     required: true
-  GATSBY_SITE_ID:
+  gatsby-site-id:
     description: "The Gatsby Cloud site ID"
     required: true
-  TERRAFORM_OUTPUT:
+  terraform-output:
     description: "The terraform output as a JSON file"
     required: true
 outputs:

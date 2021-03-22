@@ -9,6 +9,6 @@ jobs:
       id: hello
       uses: tnorlund/gatsby-cloud-action@v1.0.5
       with:
-        gatsby-token: ${{ secrets.GATSBY_TOKEN }}
+        gatsby-token: ${{ secrets.GATSBY_TOKEN }} 
         gatsby-site-id: ${{ secrets.GATSBY_SITE_ID }}
         terraform-output: terraform/output.json
