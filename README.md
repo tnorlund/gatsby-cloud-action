@@ -1,21 +1,47 @@
-# Hello world javascript action
+# Gatsby Cloud Action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action updates the `ENV` of a Gatsby site built using Gatsby Cloud with the Terraform output.
+
+![GatsbyCloud](https://tnorlundgithub.s3-us-west-2.amazonaws.com/GatsbyCloud.png)
+![Terraform](https://tnorlundgithub.s3-us-west-2.amazonaws.com/terraform.png)
+
+## Setup
+Login in to your Gatsby Cloud account and get the token using the browser's console:
+
+`window.localStorage.getItem("gatsby:token")`
+
+Then use the URL to find the site ID:
+
+`https://www.gatsbyjs.com/dashboard/<PROJECT_ID>/sites/<SITE_ID>/deploys`
 
 ## Inputs
 
-### `who-to-greet`
+### `gatsby-token`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The token used to access the API.
+
+### `gatsby-site-id`
+
+**Required** The Gatsby Cloud site ID.
+
+### `terraform-output`
+
+**Required** The file path of the JSON terraform output.
 
 ## Outputs
 
-### `time`
+### `Build`
 
-The time we greeted you.
+Whether the build ENV was updated.
+
+### `Preview`
+
+Whether the preview ENV was updated.
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
+uses: actions/gatsby-cloud-action@v1.1
 with:
-  who-to-greet: 'Mona the Octocat'
+  gatsby-token: ${{ secrets.GATSBY-TOKEN }}
+  gatsby-site-id: ${{ secrets.GATSBY-SITE-ID }}
+  terraform-output: terraform/output.json

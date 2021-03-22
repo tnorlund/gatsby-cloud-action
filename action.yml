@@ -1,13 +1,20 @@
-name: "Hello World"
-description: "Greet someone and record the time"
+name: "Gatsby Cloud ENV Update"
+description: "Update the ENV of Gatsby Cloud"
 inputs:
-  who-to-greet: # id of input
-    description: "Who to greet"
+  gatsby-token:
+    description: "The token used to access Gatsby Cloud"
     required: true
-    default: "World"
+  gatsby-site-id:
+    description: "The Gatsby Cloud site ID"
+    required: true
+  terraform-output:
+    description: "The terraform output as a JSON file"
+    required: true
 outputs:
-  time: # id of output
-    description: "The time we greeted you"
+  Build:
+    description: "Whether the build ENV was updated"
+  Preview:
+    description: "Whether the preview ENV was updated"
 runs:
   using: "node12"
   main: "index.js"

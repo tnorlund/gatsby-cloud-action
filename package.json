@@ -19,6 +19,8 @@
   "homepage": "https://github.com/tnorlund/gatsby-cloud-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0"
+    "@actions/github": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.1"
   }
 }
