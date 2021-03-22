@@ -8,11 +8,11 @@ const fs = require( "fs" );
 
 const run = async () => {
   /** The token used to access Gatsby Cloud */
-  const gatsbyToken = core.getInput( "gatsby-token" )
+  const gatsbyToken = core.getInput( "GATSBY_TOKEN" )
   /** The ID of the site to modify */
-  const siteID = core.getInput( "gatsby-site-id" )
+  const siteID = core.getInput( "GATSBY_SITE_ID" )
   /** The file that holds the Terraform output */
-  const terraformOutputFile = core.getInput( "terraform-output" )
+  const terraformOutputFile = core.getInput( "TERRAFORM_OUTPUT" )
   /** The GraphQL schema used to query the existing ENV */
   const query = `query AllEnvironmentVariablesForSite($id: UUID!) {
     buildEnvironmentVariablesForSite: environmentVariablesForSite(
@@ -110,12 +110,12 @@ const run = async () => {
     /** The new ENV as a JSON object. */
     const newJSON = await newENV.json()
     core.setOutput(
-      "Build", 
+      "BUILD", 
       newJSON.data.updateBuildEnvironmentVariablesForSite.success 
         ? 'Updated' : 'Not Updated' 
     )
     core.setOutput(
-      "Preview", 
+      "PREVIEW", 
       newJSON.data.updatePreviewEnvironmentVariablesForSite.success 
         ? 'Updated' : 'Not Updated' 
     )
