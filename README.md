@@ -40,8 +40,10 @@ Whether the preview ENV was updated.
 
 ## Example usage
 
+```yml
 uses: actions/gatsby-cloud-action@v1.0.5
 with:
   gatsby-token: ${{ secrets.GATSBY-TOKEN }}
   gatsby-site-id: ${{ secrets.GATSBY-SITE-ID }}
   terraform-output: terraform/output.json
+```
